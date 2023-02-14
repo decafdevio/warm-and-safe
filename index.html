@@ -1,0 +1,191 @@
+//brad edit this and change routes to non root, ok root
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Warm and Safe App</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="/frontend/index.css" />
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="logo1.jpg" width="60" height="58"> Warm and Safe</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Find warm rooms and warm banks near you</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-text">
+                        <li>
+                            <a onclick="login()" href="#userInputArea" class="text-decoration-none text-muted"> login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div id="map">
+
+                        <div id="map-menu">
+                        <!-- <div id="search-bar">
+                            <input type="textarea" id="search-text" placeholder="Search location" />
+                            <div id="search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                  </svg>
+                            </div>
+    
+                        </div> -->
+
+                        <div id="info" onclick=infoToggle()>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                                <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z"/>
+                              </svg>
+                        </div>
+
+                        </div>
+                        <div id="welcome">
+                        <h5>Instructions</h5>
+                        <ul>
+                            <li>Zooming options are in the top left of the map</li>
+                            <li>Click marker icon to display location information</li>
+                        </ul>
+                        <div id="close" onclick=infoToggle()>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                              </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <script src="map.js"></script>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col" id="userInputArea">
+                    <!-- This will be hidden unless user logged in. -->
+                    <img src="logo1.jpg" width="60" height="58">Welcome {Username}. Click map location to add a place. Click place marker to edit or delete a place.
+
+
+                    <form action="#">
+                        <label for="pname">Place name:</label>
+                        <input type="text" id="pname" name="pname"><br><br>
+                        <label for="latlong">Lat/Long:</label>
+                        <input type="text" id="latlong" name="latlong" placeholder="e.latlng" disabled><br><br>
+                        <p>This Warm Space offers:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facHeating" checked disabled>
+                            <label class="form-check-label" for="facHeating">Heating *required</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facShelter" checked disabled>
+                            <label class="form-check-label" for="facShelter">Shelter *required</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facSeating" checked disabled>
+                            <label class="form-check-label" for="facSeating">Seating *required</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facFood">
+                            <label class="form-check-label" for="facFood">Sells food or drink</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facToys">
+                            <label class="form-check-label" for="facToys">Children's toys available</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facEnts">
+                            <label class="form-check-label" for="facEnts">Entertainment – simple entertainment for
+                                adults, e.g., radio or magazine </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facWifi">
+                            <label class="form-check-label" for="facWifi">Free or paid Wi-Fi </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facToilets">
+                            <label class="form-check-label" for="facToilets">Public toilets</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="facMobility">
+                            <label class="form-check-label" for="facMobility">Level-access for wheelchair users</label>
+                        </div>
+                        <br />
+                        <label for="opening">Opening Hours</label><br />
+                        <label for="mon-hour">Monday: </label>
+                        <input type="time" id="mon-from" name="mon-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="mon-to" name="mon-to" min="00:01" max="23:59" size="5" placeholder="23:59">
+                        <input class="form-check-input" type="checkbox" id="closed-monday">
+                        <label class="form-check-label" for="closed-monday">Closed</label><br />
+
+                        <label for="tues-hour">Tuesday: </label>
+                        <input type="time" id="tues-from" name="tues-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="tuse-to" name="tues-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+
+                        <label for="weds-hour">Wednesday: </label>
+                        <input type="time" id="weds-from" name="weds-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="weds-to" name="weds-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+
+                        <label for="thurs-hour">Thursday: </label>
+                        <input type="time" id="thurs-from" name="thurs-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="thurs-to" name="thurs-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+
+                        <label for="fri-hour">Friday: </label>
+                        <input type="time" id="fri-from" name="fri-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="fri-to" name="fri-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+
+                        <label for="sat-hour">Saturday: </label>
+                        <input type="time" id="sat-from" name="sat-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="sat-to" name="sat-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+
+                        <label for="sun-hour">Sunday: </label>
+                        <input type="time" id="sun-from" name="sun-from" min="00:01" max="23:59" size="5" placeholder="00:00"> to
+                        <input type="time" id="sun-to" name="sun-to" min="00:01" max="23:59" size="5" placeholder="23:59"><br />
+                        
+                        <br><br>
+                        <label for="username">Verified by:</label>
+                        <input type="text" id="username" name="username" disabled placeholder="{userName}"><br><br>
+                        <input type="button" value="Create a place" class="btn btn-primary" onclick=createPlace()>
+                        <input type="button" value="Update place" class="btn btn-secondary">
+                        <input type="button" value="Delete this place" class="btn btn-danger">
+                        <br><br>
+                        <label for="username">Verified by:</label>
+                        <input type="text" id="username" name="username" disabled placeholder="{userName}"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-white text-lg-start bg-dark">
+            <div class="text-center p-3">
+                © 2022 Copyright:
+                <a class="text-white" href="https://www.thedeveloperacademy.com/">The Developer Academy </a>
+            </div>
+        </footer>
+</body>
+
+</html>

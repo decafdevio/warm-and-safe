@@ -1,0 +1,220 @@
+[
+  {
+    "_id": "63246d0576e01731bf707ed4",
+    "user": "63244e9adf0517bc22db2f29",
+    "long": "53.382588",
+    "lat": "-1.469011",
+    "title": "Sheffield Cathedral",
+    "details": "Church St, Sheffield City Centre, Sheffield S1 1HA",
+    "type": "faith",
+    "facilities": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "monday": [
+      900,
+      1700
+    ],
+    "tuesday": [
+      900,
+      1700
+    ],
+    "wednesday": [
+      900,
+      1700
+    ],
+    "thursday": [
+      900,
+      1700
+    ],
+    "friday": [
+      900,
+      1700
+    ],
+    "saturday": [
+      900,
+      1700
+    ],
+    "sunday": [
+      0,
+      0
+    ],
+    "createdAt": "2022-09-16T12:33:09.686Z",
+    "updatedAt": "2022-09-16T12:33:09.686Z",
+    "__v": 0
+  },
+  {
+    "_id": "632473c8686dea340f752cfa",
+    "user": "632474339f8791347efac6a0",
+    "long": "53.380215",
+    "lat": "-1.466846",
+    "title": "Sheffield Central Library",
+    "details": "Surrey St, Sheffield City Centre, Sheffield S1 1XZ",
+    "type": "library",
+    "facilities": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    "monday": [
+      900,
+      1700
+    ],
+    "tuesday": [
+      900,
+      1700
+    ],
+    "wednesday": [
+      900,
+      1700
+    ],
+    "thursday": [
+      900,
+      1700
+    ],
+    "friday": [
+      900,
+      1700
+    ],
+    "saturday": [
+      900,
+      1700
+    ],
+    "sunday": [
+      0,
+      0
+    ],
+    "createdAt": "2022-09-16T13:02:00.420Z",
+    "updatedAt": "2022-09-16T13:02:00.421Z",
+    "__v": 0
+  },
+  {
+    "_id": "63248b97c606816d89d3f41a",
+    "long": "53.462009",
+    "lat": "-1.4689",
+    "title": "Chapeltown Library",
+    "details": "Nether Ley Avenue, Sheffield, S35 1AE",
+    "type": "library",
+    "facilities": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    "monday": [
+      1230,
+      1830
+    ],
+    "tuesday": [
+      1000,
+      1730
+    ],
+    "wednesday": [
+      0,
+      0
+    ],
+    "thursday": [
+      1000,
+      1730
+    ],
+    "friday": [
+      1000,
+      1400
+    ],
+    "saturday": [
+      900,
+      1700
+    ],
+    "sunday": [
+      1000,
+      1600
+    ],
+    "createdAt": "2022-09-16T14:43:35.895Z",
+    "updatedAt": "2022-09-16T14:43:35.895Z",
+    "__v": 0
+  },
+  {
+    "_id": "6326634dcc5984e8405fa005",
+    "user": "63244e9adf0517bc22db2f29",
+    "long": "123",
+    "lat": "456",
+    "title": "Sheffield new Place",
+    "details": "details will go here",
+    "type": "faith",
+    "facilities": [
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "monday": [],
+    "tuesday": [],
+    "wednesday": [],
+    "thursday": [],
+    "friday": [],
+    "saturday": [],
+    "sunday": [],
+    "createdAt": "2022-09-18T00:16:13.735Z",
+    "updatedAt": "2022-09-18T00:16:13.735Z",
+    "__v": 0
+  },
+  {
+    "_id": "63266384cc5984e8405fa008",
+    "user": "63244e9adf0517bc22db2f29",
+    "long": "53.363990",
+    "lat": "-1.435275",
+    "title": "Arbourthorne Community Centre",
+    "details": "33A Edenhall Rd, Sheffield S2 2LD",
+    "type": "community",
+    "facilities": [
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "monday": [
+      900,
+      1530
+    ],
+    "tuesday": [
+      900,
+      1530
+    ],
+    "wednesday": [
+      900,
+      1530
+    ],
+    "thursday": [
+      900,
+      1530
+    ],
+    "friday": [
+      900,
+      1530
+    ],
+    "saturday": [
+      0,
+      0
+    ],
+    "sunday": [
+      0,
+      0
+    ],
+    "createdAt": "2022-09-18T00:17:08.335Z",
+    "updatedAt": "2022-09-20T18:41:38.756Z",
+    "__v": 0
+  }
+]

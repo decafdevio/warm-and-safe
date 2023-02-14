@@ -1,0 +1,58 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 98vw;
+}
+
+footer div {
+    opacity: .3;
+    min-width: 10rem;
+}
+footer div:hover {
+    opacity: .7;
+}
+
+
+
+#logo-img {
+    height: 5rem;
+    padding: 1.5rem;
+}
+
+#tda-img {
+    height: 5rem;
+    padding: 1.5rem;
+    margin-top: .4rem;
+}
+
+.dev-container {
+    display: flex;
+    margin-right: 1rem;
+}
+
+.dev-img {
+    height: 5rem;
+    border: .2rem solid rgb(100, 100, 100);
+    border-radius: 5rem;
+    margin-top: 1.5rem;
+}
+.dev-content {
+    margin-top: 2rem;
+    margin-left: .5rem;
+    font-family: poppins;
+    font-weight: 900;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+
+}
+.dev-title {
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+.dev-link a {
+    font-weight: 900;
+    font-size: .9rem;
+    text-decoration: overline;
+    color: rgb(100, 100, 100);
+}

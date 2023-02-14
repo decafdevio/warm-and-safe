@@ -1,0 +1,28 @@
+#logo-image {
+    margin-top: .2rem;
+    height: 60px;
+    filter: drop-shadow(0 0 .8rem #000000);
+}
+
+#nav-container {
+    position: relative;
+    /* display: flex; */
+    margin: .6rem 0 0 .6rem;
+  }
+  
+  #appname-container {
+    background: white;
+    border: 2px solid rgb(176, 176, 176);
+    border-right: 0px;
+    border-radius: .3em 0 0 .3em;
+  }
+  
+  #appname {
+    padding: .7em;
+  }
+
+  .top-right {
+    position: absolute;
+    right: 1.5rem;
+    top: .5rem;
+  }
