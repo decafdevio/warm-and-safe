@@ -11,7 +11,7 @@
 
 Warm & Safe locates where someone can go to stay warm. Each pin gives information on address, facilities available and opening hours. Developed as part of an agile software consultancy team, tech used included HTML, CSS, JavaScript, OpenStreetMap API, Leaflet.js, Express, Node, Mongoose, Mongo DB, Json Web Tokens (JWT) full CRUD capabilities using Slack and MS Teams for communication. Accessibility for screen readers.
 
-- [ ] [Solve GET speeds from Azure Cosmos #1](https://github.com/decafdeveloper/warm-and-safe/issues/1)
+- [ ] Solve GET speeds from Azure Cosmos [#1](https://github.com/decafdeveloper/warm-and-safe/issues/1)
 
 ## Installation
 
