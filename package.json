@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alyzande/WARMER.git"
+    "url": "git+https://github.com/decafdevio/warm-and-safe"
   },
   "author": "Alyzande Renard",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/Alyzande/WARMER/issues"
+    "url": "https://github.com/decafdevio/warm-and-safe/issues"
   },
-  "homepage": "https://github.com/Alyzande/WARMER#readme",
+  "homepage": "https://github.com/decafdevio/warm-and-safe",
   "dependencies": {
     "axios": "^1.0.0",
     "bcryptjs": "^2.4.3",
